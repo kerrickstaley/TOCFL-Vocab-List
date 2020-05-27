@@ -6,6 +6,7 @@ LEVEL_NUMBERS = ['0.1', '0.2', '1', '2', '3', '4', '5']
 
 def main():
     wb = load_workbook('input.xlsx')
+    print('level,word')
     for level_number, level_name in zip(LEVEL_NUMBERS, wb.sheetnames[:len(LEVEL_NUMBERS)]):
         ws = wb[level_name]
         for word_column in 'AB':
